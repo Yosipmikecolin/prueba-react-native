@@ -33,3 +33,10 @@ Antes de comenzar, asegúrate de tener instalados los siguientes requisitos en t
   - **Android**: Android Studio con AVD Manager configurado
   - **iOS**: Xcode con simulador de iPhone (solo en macOS)
 - **Expo Go App**: Aplicación Expo Go instalada en tu dispositivo móvil para pruebas en tiempo real escaneando el QR.
+
+
+## Video de funcionamiento 📹
+
+Video del funcionamiento completo de la aplicación de usuarios
+
+[https://drive.google.com/file/d/1qVkiRJkB8znN-BtlnoUwN1_kyjGSHP3M/view?usp=sharing](https://drive.google.com/file/d/1qVkiRJkB8znN-BtlnoUwN1_kyjGSHP3M/view?usp=sharing)
