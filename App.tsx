@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import { useState, useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 import { User } from "./interfaces/user";
 
 export default function App() {
@@ -27,6 +27,9 @@ export default function App() {
   useEffect(() => {
     getUsers();
   }, []);
+
+  if (error) return <Text style={{ color: "red" }}>Error: {error}</Text>;
+  if (loading) return <ActivityIndicator size="large" color="orange" />;
 
   return (
     <View style={styles.container}>
