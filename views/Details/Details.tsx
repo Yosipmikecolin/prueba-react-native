@@ -5,11 +5,10 @@ import { styles } from "./Styles";
 import { User } from "../../interfaces/user";
 
 export type RootStackParamList = {
-  Home: undefined;
-  Detalles: { user: User };
+  details: { user: User };
 };
 
-type DetailsScreenRouteProp = RouteProp<RootStackParamList, "Detalles">;
+type DetailsScreenRouteProp = RouteProp<RootStackParamList, "details">;
 
 const DetailsScreen: React.FC = () => {
   const route = useRoute<DetailsScreenRouteProp>();

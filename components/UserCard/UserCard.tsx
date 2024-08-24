@@ -20,7 +20,7 @@ const UserCard: React.FC<UserCardProps> = ({ user }) => {
 
   const handlePress = () => {
     //@ts-ignore
-    navigation.navigate("Detalles", { user });
+    navigation.navigate("details", { user });
   };
   return (
     <View style={styles.card}>

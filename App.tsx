@@ -10,9 +10,9 @@ const Stack = createStackNavigator();
 const AppNavigator: React.FC = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Usuarios">
+      <Stack.Navigator initialRouteName="users">
         <Stack.Screen
-          name="Usuarios"
+          name="users"
           component={HomeScreen}
           options={{
             title: "Lista de usuarios",
@@ -26,7 +26,7 @@ const AppNavigator: React.FC = () => {
             ),
           }}
         />
-        <Stack.Screen name="Detalles" component={DetailsScreen} />
+        <Stack.Screen name="details" options={{title:"Detalles de usuario"}} component={DetailsScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
