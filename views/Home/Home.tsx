@@ -1,15 +1,9 @@
 import { useState, useEffect } from "react";
-import { UserCard, Header } from "../components";
+import { UserCard, Header } from "../../components";
 import { StatusBar } from "expo-status-bar";
-import {
-  ActivityIndicator,
-  StyleSheet,
-  Text,
-  View,
-  FlatList,
-} from "react-native";
-import { User } from "../interfaces/user";
-import React from "react";
+import { ActivityIndicator, Text, View, FlatList } from "react-native";
+import { styles } from "./Styles";
+import { User } from "../../interfaces/user";
 
 export default function App() {
   const [users, setUsers] = useState<User[]>([]);
@@ -52,16 +46,3 @@ export default function App() {
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  list: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-  },
-});
