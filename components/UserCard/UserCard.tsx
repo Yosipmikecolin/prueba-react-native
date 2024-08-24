@@ -2,26 +2,26 @@ import React from "react";
 import { View, Text, Image, Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./Styles";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { User } from "../../interfaces/user";
+import { RootStackParamList } from "../../views/Details/Details";
+
+type DetailsScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  "details"
+>;
 
 interface UserCardProps {
-  user: {
-    name: {
-      first: string;
-      last: string;
-    };
-    picture: {
-      medium: string;
-    };
-  };
+  user: User;
 }
 
 const UserCard: React.FC<UserCardProps> = ({ user }) => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<DetailsScreenNavigationProp>();
 
   const handlePress = () => {
-    //@ts-ignore
     navigation.navigate("details", { user });
   };
+
   return (
     <View style={styles.card}>
       <Image source={{ uri: user.picture.medium }} style={styles.userImage} />
