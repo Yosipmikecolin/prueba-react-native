@@ -1,19 +1,6 @@
-import React from "react";
-import { Image, View, StyleSheet, Text } from "react-native";
-const icon = require("../assets/icon.png");
+import { StyleSheet } from "react-native";
 
-const Header = () => {
-  return (
-    <View style={styles.header}>
-      <Image source={icon} style={styles.icon} />
-      <Text style={styles.title}>Usuarios</Text>
-    </View>
-  );
-};
-
-export default Header;
-
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
