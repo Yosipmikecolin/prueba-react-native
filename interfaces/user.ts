@@ -12,4 +12,13 @@ export interface User {
     medium: string;
     thumbnail: string;
   };
+  email: string;
+  phone: string;
+  location: {
+    street: string;
+    city: string;
+    state: string;
+    country: string;
+    postcode: string;
+  };
 }
