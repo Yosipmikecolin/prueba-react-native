@@ -1,6 +1,13 @@
-import { StatusBar } from "expo-status-bar";
 import { useState, useEffect } from "react";
-import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
+import { UserCard } from "./components";
+import { StatusBar } from "expo-status-bar";
+import {
+  ActivityIndicator,
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+} from "react-native";
 import { User } from "./interfaces/user";
 
 export default function App() {
@@ -33,8 +40,13 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
+      <FlatList
+        data={users}
+        keyExtractor={(item) => item.login.uuid}
+        renderItem={({ item }) => <UserCard user={item} />}
+        contentContainerStyle={styles.list}
+      />
     </View>
   );
 }
@@ -45,5 +57,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+  },
+  list: {
+    paddingHorizontal: 20,
+    paddingVertical: 10,
   },
 });
