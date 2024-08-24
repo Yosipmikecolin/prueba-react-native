@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { UserCard } from "./components";
+import { UserCard, Header } from "./components";
 import { StatusBar } from "expo-status-bar";
 import {
   ActivityIndicator,
@@ -41,6 +41,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
+      <Header />
       <FlatList
         data={users}
         keyExtractor={(item) => item.login.uuid}
