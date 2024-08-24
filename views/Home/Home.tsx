@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { UserCard, Header } from "../../components";
+import { UserCard } from "../../components";
 import { StatusBar } from "expo-status-bar";
 import { ActivityIndicator, Text, View, FlatList } from "react-native";
 import { styles } from "./Styles";
@@ -36,7 +36,6 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Header />
       <FlatList
         data={users}
         keyExtractor={(item) => item.login.uuid}

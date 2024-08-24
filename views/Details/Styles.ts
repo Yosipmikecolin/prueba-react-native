@@ -31,5 +31,6 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     marginTop: 10,
     color: "gray",
+    textAlign:"center"
   },
 });
